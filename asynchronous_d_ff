@@ -5,11 +5,11 @@ output q, qbar;
 input d, clk, reset;
 reg q, qbar; //declare q and qbar are registers
 always @(negedge clk) //assign value of q&qbar atactive edge of clock.
-oegin
+begin
 q = d;
 qbar = -d;
-2nd
-3lways @(reset) //Override the regular assignments to q and qbar
+end
+always @(reset) //Override the regular assignments to q and qbar
 //whenever reset goes high. Use of procedural continuou:
 //assignments.
 if (reset)
